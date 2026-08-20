@@ -1,0 +1,104 @@
+{
+  "backend": "keyword overlap",
+  "mean_ms": {
+    "embed": 0.0,
+    "retrieve": 0.1,
+    "llm": 7946.2,
+    "total": 7946.3
+  },
+  "results": [
+    {
+      "query": "Why is goodput more useful than raw throughput?",
+      "answer": "Goodput@SLO counts only the requests per second that met the TTFT and TPOT targets.",
+      "contexts": [
+        {
+          "id": "goodput",
+          "score": 1.0
+        },
+        {
+          "id": "paged",
+          "score": 0.0
+        },
+        {
+          "id": "radix",
+          "score": 0.0
+        }
+      ],
+      "embed_backend": "keyword overlap",
+      "timings_ms": {
+        "embed": 0.0,
+        "retrieve": 0.1,
+        "llm": 8612.1,
+        "total": 8612.3
+      },
+      "server_timings": {
+        "prompt_n": 149,
+        "prompt_ms": 4107.259,
+        "predicted_n": 22,
+        "predicted_ms": 1773.58
+      }
+    },
+    {
+      "query": "What problem does PagedAttention actually solve?",
+      "answer": "PagedAttention stores the KV cache in non-contiguous pages, removing the internal fragmentation that wasted most GPU memory.",
+      "contexts": [
+        {
+          "id": "paged",
+          "score": 1.0
+        },
+        {
+          "id": "radix",
+          "score": 0.0
+        },
+        {
+          "id": "disagg",
+          "score": 0.0
+        }
+      ],
+      "embed_backend": "keyword overlap",
+      "timings_ms": {
+        "embed": 0.0,
+        "retrieve": 0.1,
+        "llm": 7748.9,
+        "total": 7749.1
+      },
+      "server_timings": {
+        "prompt_n": 114,
+        "prompt_ms": 3314.972,
+        "predicted_n": 23,
+        "predicted_ms": 1873.118
+      }
+    },
+    {
+      "query": "When does splitting prefill and decode help?",
+      "answer": "Splitting prefill and decode helps because prefill is compute-bound and decode is memory-bandwidth-bound.",
+      "contexts": [
+        {
+          "id": "disagg",
+          "score": 2.0
+        },
+        {
+          "id": "radix",
+          "score": 1.0
+        },
+        {
+          "id": "batching",
+          "score": 1.0
+        }
+      ],
+      "embed_backend": "keyword overlap",
+      "timings_ms": {
+        "embed": 0.0,
+        "retrieve": 0.1,
+        "llm": 7477.5,
+        "total": 7477.6
+      },
+      "server_timings": {
+        "prompt_n": 113,
+        "prompt_ms": 3100.609,
+        "predicted_n": 24,
+        "predicted_ms": 1846.96
+      }
+    }
+  ]
+}
